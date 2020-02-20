@@ -1,0 +1,28 @@
+<p>This is the partial for view 1.</p>
+<p>{{title}}</p>
+
+<ol>
+    <li ng-repeat="item in items">
+        {{item}}
+    </li>
+</ol>
+
+<button ng-click="toggleShowTable()">TOGGLE TABLE</button>
+<button ng-click="loadForeCastData()">TOGGLE FORECAST</button>
+
+<table ng-if="showFlag">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Manufacturer</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="inventory in inventories">
+            <td>{{inventory.name}}</td>
+            <td>{{inventory.manufacturer}}</td>
+            <td>{{inventory.price}}</td>
+        </tr>
+    </tbody>
+</table>
